@@ -2,6 +2,8 @@
 
 A daily checkbox planner for 8-week patellar tendinopathy rehabilitation with upper body and core work on non-HSR days. All data is stored locally in your browser with no tracking.
 
+**Live App**: https://jrozra200.github.io/knee_rehab/
+
 ## Features
 
 - **8-week structured rehab plan** following evidence-based patellar tendinopathy protocols
