@@ -3,8 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>8‑Week Patellar Tendon Rehab Planner</title>
-  <meta name="description" content="Daily checkbox planner for 8‑week patellar tendinopathy rehab with upper‑body/core on non‑HSR days. Local save, print, and export/import." />
+  <title>Week 1 & 2 Patellar Tendon Rehab</title>
   <style>
     :root {
       --bg: #0b0c10;
@@ -14,400 +13,891 @@
       --muted: #a9afbf;
       --accent: #6ea8fe;
       --accent-2: #4ade80;
-      --warn: #fbbf24;
-      --danger: #f87171;
       --border: #242a36;
     }
-    html, body { height: 100%; }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; margin: 0; }
     body {
-      margin: 0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
       background: linear-gradient(160deg, var(--bg), #0e1117 45%, #0b0c10);
       color: var(--ink);
-      line-height: 1.45;
+      line-height: 1.6;
+      padding: 24px;
     }
-    .wrap { max-width: 1100px; margin: 0 auto; padding: 24px; }
-    header { position: sticky; top: 0; z-index: 20; backdrop-filter: blur(6px); background: rgba(11,12,16,0.7); border-bottom: 1px solid var(--border); }
-    header .inner { max-width: 1100px; margin: 0 auto; padding: 12px 24px; display: grid; grid-template-columns: 1fr auto auto; gap: 12px; align-items: center; }
-    h1 { font-size: 1.5rem; margin: 0; }
-    .subtitle { color: var(--muted); font-size: .95rem; }
-    .controls { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
-    .controls input[type="date"] { background: var(--card); color: var(--ink); border: 1px solid var(--border); border-radius: 8px; padding: 8px 10px; }
-    .btn { background: var(--card); color: var(--ink); border: 1px solid var(--border); padding: 8px 12px; border-radius: 10px; cursor: pointer; }
-    .btn:hover { border-color: var(--accent); }
-    .btn.primary { background: linear-gradient(180deg, #223554, #1a2a43); border-color: #294268; }
-    .btn.accent { background: linear-gradient(180deg, #164e22, #0f3a19); border-color: #1e6a31; }
-
-    .notice { margin: 16px 0; padding: 12px 14px; border: 1px dashed var(--border); border-radius: 10px; background: var(--panel); color: var(--muted); }
-
-    .grid { display: grid; gap: 16px; }
-    @media (min-width: 880px) { .grid { grid-template-columns: repeat(2, 1fr); } }
-
-    .week { border: 1px solid var(--border); border-radius: 16px; background: var(--panel); overflow: hidden; }
-    .week header.weekhead { padding: 12px 16px; display: flex; justify-content: space-between; align-items: center; background: #0f1218; border-bottom: 1px solid var(--border); }
-    .week h2 { margin: 0; font-size: 1.1rem; }
-    .week-tools { display: flex; gap: 8px; align-items: center; }
-    .visa { color: var(--muted); font-size: .9rem; }
-    .visa input { width: 64px; background: var(--card); color: var(--ink); border: 1px solid var(--border); border-radius: 6px; padding: 4px 6px; }
-
-    details.day { border-top: 1px solid var(--border); background: var(--card); }
-    details.day[open] summary { background: #141925; }
-    summary { list-style: none; display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 12px; padding: 12px 16px; cursor: pointer; }
-    summary::-webkit-details-marker { display: none; }
-    .date { color: var(--muted); font-size: .9rem; }
-    .focus { color: var(--accent-2); font-weight: 600; }
-
-    .content { padding: 12px 16px 18px; display: grid; gap: 10px; }
-    .taskline { display: flex; align-items: start; gap: 10px; }
-    .taskline input[type="checkbox"] { width: 18px; height: 18px; accent-color: var(--accent-2); }
-    .taskline label { user-select: none; }
-    .muted { color: var(--muted); }
-    .small { font-size: .9rem; }
-
-    .textarea { width: 100%; min-height: 64px; background: var(--panel); color: var(--ink); border: 1px solid var(--border); border-radius: 10px; padding: 8px 10px; }
-    .numbers { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
-    .numbers label { display: flex; gap: 6px; align-items: center; }
-    .numbers input { width: 56px; background: var(--panel); color: var(--ink); border: 1px solid var(--border); border-radius: 6px; padding: 4px 6px; }
-
-    .footer { margin-top: 32px; color: var(--muted); font-size: .9rem; }
-
-    .kicker { display: inline-flex; gap: 6px; align-items: center; padding: 2px 8px; border: 1px solid var(--border); border-radius: 999px; color: var(--muted); font-size: .8rem; }
-
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    h1 {
+      text-align: center;
+      color: var(--accent-2);
+      margin-bottom: 32px;
+    }
+    .day-card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    .day-header {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--accent-2);
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    .day-date {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+    .task-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 16px 0;
+    }
+    .task-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 8px 0;
+    }
+    .task-item input[type="checkbox"] {
+      width: 20px;
+      height: 20px;
+      margin-top: 2px;
+      accent-color: var(--accent-2);
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+    .task-label {
+      flex: 1;
+    }
+    .task-label strong {
+      color: var(--accent);
+    }
+    .nested-list {
+      list-style: none;
+      padding-left: 32px;
+      margin: 8px 0;
+    }
+    .nested-list .task-item {
+      padding: 4px 0;
+    }
+    .pain-tracking {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 12px;
+      margin-top: 16px;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+    .pain-tracking input {
+      background: var(--panel);
+      color: var(--ink);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 4px 8px;
+      width: 60px;
+      margin: 0 4px;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 32px 0;
+    }
     @media print {
-      header, .footer, .notice, .week-tools button, .controls { display: none !important; }
-      body { background: white; color: #111; }
-      .week, .day, .content, .textarea { border-color: #bbb !important; color: #111; }
+      body {
+        background: white;
+        color: #111;
+      }
+      .day-card {
+        border-color: #ccc;
+        break-inside: avoid;
+      }
     }
   </style>
 </head>
 <body>
-  <header>
-    <div class="inner">
-      <div>
-        <h1>8‑Week Patellar Tendon Rehab Planner</h1>
-        <div class="subtitle">Daily checklist with autosave (local only). Adjust start date to regenerate dates.</div>
+  <div class="container">
+    <h1>Week 1 & 2 — HSR Patellar Tendon Rehab</h1>
+
+    <!-- Week 1 - Day 1 -->
+    <div class="day-card">
+      <div class="day-header">
+        <div>Wed Oct 29, 2025 — <strong>Week 1 · HSR</strong></div>
       </div>
-      <div class="controls">
-        <label class="kicker">Start date <input id="startDate" type="date"></label>
-        <button class="btn" id="expandAll">Expand all</button>
-        <button class="btn" id="collapseAll">Collapse all</button>
-        <button class="btn" id="resetProgress" title="Clears all saved checkboxes & notes">Reset</button>
-        <button class="btn" id="exportBtn" title="Download your progress as JSON">Export</button>
-        <input type="file" id="importFile" accept="application/json" style="display:none" />
-        <button class="btn" id="importBtn" title="Import a previously exported JSON">Import</button>
-        <button class="btn primary" onclick="window.print()">Print</button>
+      <ul class="task-list">
+        <li class="task-item">
+          <input type="checkbox" id="w1d1-1">
+          <label class="task-label" for="w1d1-1"><strong>Warm‑up</strong>: 8–10 min easy bike/row + dynamic leg swings/hip circles/ankle rocks</label>
+        </li>
+        <li class="task-item">
+          <input type="checkbox" id="w1d1-2">
+          <label class="task-label" for="w1d1-2"><strong>Isometrics</strong>: 5×45–60 s Spanish squat <strong>or</strong> ~60° leg‑extension hold @ ~70% effort</label>
+        </li>
+        <li class="task-item">
+          <input type="checkbox" id="w1d1-3">
+          <label class="task-label" for="w1d1-3"><strong>Leg press</strong> 4×15 (3‑0‑3) — Start ~1×45 lb plate/side; add +10–20 lb total per set to finish at RIR 2–3 (pain ≤3/10).</label>
+        </li>
+        <li class="task-item">
+          <input type="checkbox" id="w1d1-4">
+          <label class="task-label" for="w1d1-4"><strong>Goblet box squat</strong> 3×15 — choose a load that maintains tempo and form</label>
+        </li>
+        <li class="task-item">
+          <input type="checkbox" id="w1d1-5">
+          <label class="task-label" for="w1d1-5"><strong>Hip thrust/bridge</strong> 3×12–15 — controlled; full hip lockout</label>
+        </li>
+        <li class="task-item">
+          <input type="checkbox" id="w1d1-6">
+          <label class="task-label" for="w1d1-6"><strong>Calf raises</strong> straight‑ & bent‑knee 3×15 — Bodyweight + 2×20–25 lb DBs (3×15). Pause at bottom; no bouncing.</label>
+        </li>
+        <li class="task-item">
+          <input type="checkbox" id="w1d1-7">
+          <label class="task-label" for="w1d1-7"><strong>Miniband lateral walks</strong> 2×15 m</label>
+        </li>
+        <li class="task-item">
+          <input type="checkbox" id="w1d1-8">
+          <label class="task-label" for="w1d1-8"><strong>Mobility</strong>: quads/hip‑flexors/calves 30 s×2; ankle dorsiflexion rocks 2×10</label>
+        </li>
+      </ul>
+      <div class="pain-tracking">
+        Pain during (0–10): <input type="number" min="0" max="10" /> | Next‑day pain (0–10): <input type="number" min="0" max="10" /> | Notes: <input type="text" style="width: 200px;" />
       </div>
     </div>
-  </header>
 
-  <div class="wrap">
-    <div class="notice small">
-      Pain rule: keep ≤ <strong>3/10</strong> during; symptoms return to baseline within <strong>24 h</strong>. If not, reduce load/volume or repeat a prior day. Use isometric holds for pain relief (5×45–60 s Spanish squat or ~60° leg‑extension hold @ ~70% effort).
+    <!-- Week 1 - Day 2 -->
+    <div class="day-card">
+      <div class="day-header">
+        <div>Thu Oct 30, 2025 — <strong>Week 1 · Cross‑train + UB/Core B</strong></div>
+      </div>
+      <ul class="task-list">
+        <li class="task-item">
+          <input type="checkbox" id="w1d2-1">
+          <label class="task-label" for="w1d2-1"><strong>Warm‑up</strong>: 8–10 min easy bike/row + dynamic leg swings/hip circles/ankle rocks</label>
+        </li>
+        <li class="task-item">
+          <input type="checkbox" id="w1d2-2">
+          <label class="task-label" for="w1d2-2"><strong>Isometrics</strong>: 5×45–60 s Spanish squat <strong>or</strong> ~60° leg‑extension hold @ ~70% effort</label>
+        </li>
+        <li class="task-item">
+          <input type="checkbox" id="w1d2-3">
+          <label class="task-label" for="w1d2-3"><strong>Run/Cardio</strong> — Z2 20–30 min</label>
+        </li>
+        <li class="task-item">
+          <input type="checkbox" id="w1d2-4">
+          <label class="task-label" for="w1d2-4"><strong>Upper Body & Core B</strong></label>
+        </li>
+        <ul class="nested-list">
+          <li class="task-item">
+            <input type="checkbox" id="w1d2-4a">
+            <label class="task-label" for="w1d2-4a">Incline DB press 3×8–12</label>
+          </li>
+          <li class="task-item">
+            <input type="checkbox" id="w1d2-4b">
+            <label class="task-label" for="w1d2-4b">Chest‑supported row 3×8–12</label>
+          </li>
+          <li class="task-item">
+            <input type="checkbox" id="w1d2-4c">
+            <label class="task-label" for="w1d2-4c">Landmine/Seated DB press 3×8–10</label>
+          </li>
+          <li class="task-item">
+            <input type="checkbox" id="w1d2-4d">
+            <label class="task-label" for="w1d2-4d">Cable row 3×10–12</label>
+          </li>
+          <li class="task-item">
+            <input type="checkbox" id="w1d2-4e">
+            <label class="task-label" for="w1d2-4e"><strong>Core:</strong></label>
+          </li>
+          <ul class="nested-list">
+            <li class="task-item">
+              <input type="checkbox" id="w1d2-4e1">
+              <label class="task-label" for="w1d2-4e1">RKC plank 3×20–30s</label>
+            </li>
+            <li class="task-item">
+              <input type="checkbox" id="w1d2-4e2">
+              <label class="task-label" for="w1d2-4e2">Anti‑rotation walkouts 3×8/side</label>
+            </li>
+            <li class="task-item">
+              <input type="checkbox" id="w1d2-4e3">
+              <label class="task-label" for="w1d2-4e3">Farmer carry 3×30–45s</label>
+            </li>
+            <li class="task-item">
+              <input type="checkbox" id="w1d2-4e4">
+              <label class="task-label" for="w1d2-4e4">Reverse fly / Y‑T‑W 2×12–15.</label>
+            </li>
+          </ul>
+        </ul>
+        <li class="task-item">
+          <input type="checkbox" id="w1d2-5">
+          <label class="task-label" for="w1d2-5"><strong>Mobility</strong></label>
+        </li>
+        <ul class="nested-list">
+          <li class="task-item">
+            <input type="checkbox" id="w1d2-5a">
+            <label class="task-label" for="w1d2-5a">quads 30 s×2</label>
+          </li>
+          <li class="task-item">
+            <input type="checkbox" id="w1d2-5b">
+            <label class="task-label" for="w1d2-5b">hip‑flexors 30 s×2</label>
+          </li>
+          <li class="task-item">
+            <input type="checkbox" id="w1d2-5c">
+            <label class="task-label" for="w1d2-5c">calves 30 s×2</label>
+          </li>
+          <li class="task-item">
+            <input type="checkbox" id="w1d2-5d">
+            <label class="task-label" for="w1d2-5d">ankle dorsiflexion rocks 2×10</label>
+          </li>
+        </ul>
+      </ul>
+      <div class="pain-tracking">
+        Pain during (0–10): <input type="number" min="0" max="10" /> | Next‑day pain (0–10): <input type="number" min="0" max="10" /> | Notes: <input type="text" style="width: 200px;" />
+      </div>
     </div>
 
-    <div id="weeks" class="grid" aria-live="polite"></div>
-
-    <div class="footer">
-      This is a client‑side static page. Data is stored in your browser’s localStorage under the selected start‑date key. No tracking.
+    <!-- Week 1 - Day 3 -->
+    <div class="day-card">
+      <div class="day-header">
+        <div>Fri Oct 31, 2025 — <strong>Week 1 · HSR</strong></div>
+      </div>
+      <ul class="task-list">
+        <li class="task-item">
+          <input type="checkbox" id="w1d3-1">
+          <label class="task-label" for="w1d3-1"><strong>Warm‑up</strong>: 8–10 min easy bike/row + dynamic leg swings/hip circles/ankle rocks</label>
+        </li>
+        <li class="task-item">
+          <input type="checkbox" id="w1d3-2">
+          <label class="task-label" for="w1d3-2"><strong>Isometrics</strong>: 5×45–60 s Spanish squat <strong>or</strong> ~60° leg‑extension hold @ ~70% effort</label>
+        </li>
+        <li class="task-item">
+          <input type="checkbox" id="w1d3-3">
+          <label class="task-label" for="w1d3-3"><strong>Leg press</strong> 4×15 (3‑0‑3) — Start ~1×45 lb plate/side; add +10–20 lb total per set to finish at RIR 2–3 (pain ≤3/10).</label>
+        </li>
+        <li class="task-item">
+          <input type="checkbox" id="w1d3-4">
+          <label class="task-label" for="w1d3-4"><strong>Goblet box squat</strong> 3×15 — choose a load that maintains tempo and form</label>
+        </li>
+        <li class="task-item">
+          <input type="checkbox" id="w1d3-5">
+          <label class="task-label" for="w1d3-5"><strong>Hip thrust/bridge</strong> 3×12–15 — controlled; full hip lockout</label>
+        </li>
+        <li class="task-item">
+          <input type="checkbox" id="w1d3-6">
+          <label class="task-label" for="w1d3-6"><strong>Calf raises</strong> straight‑ & bent‑knee 3×15 — Bodyweight + 2×20–25 lb DBs (3×15). Pause at bottom; no bouncing.</label>
+        </li>
+        <li class="task-item">
+          <input type="checkbox" id="w1d3-7">
+          <label class="task-label" for="w1d3-7"><strong>Miniband lateral walks</strong> 2×15 m</label>
+        </li>
+        <li class="task-item">
+          <input type="checkbox" id="w1d3-8">
+          <label class="task-label" for="w1d3-8"><strong>Mobility</strong></label>
+        </li>
+        <ul class="nested-list">
+          <li class="task-item">
+            <input type="checkbox" id="w1d3-8a">
+            <label class="task-label" for="w1d3-8a">quads 30 s×2</label>
+          </li>
+          <li class="task-item">
+            <input type="checkbox" id="w1d3-8b">
+            <label class="task-label" for="w1d3-8b">hip‑flexors 30 s×2</label>
+          </li>
+          <li class="task-item">
+            <input type="checkbox" id="w1d3-8c">
+            <label class="task-label" for="w1d3-8c">calves 30 s×2</label>
+          </li>
+          <li class="task-item">
+            <input type="checkbox" id="w1d3-8d">
+            <label class="task-label" for="w1d3-8d">ankle dorsiflexion rocks 2×10</label>
+          </li>
+        </ul>
+      </ul>
+      <div class="pain-tracking">
+        Pain during (0–10): <input type="number" min="0" max="10" /> | Next‑day pain (0–10): <input type="number" min="0" max="10" /> | Notes: <input type="text" style="width: 200px;" />
+      </div>
     </div>
+
+    <!-- Week 1 - Day 4 -->
+    <div class="day-card">
+      <div class="day-header">
+        <div>Sat Nov 01, 2025 — <strong>Week 1 · Mobility + short UB/Core</strong></div>
+      </div>
+      <ul class="task-list">
+        <li class="task-item">
+          <input type="checkbox" id="w1d4-1">
+          <label class="task-label" for="w1d4-1"><strong>Isometrics</strong>: 5×45–60 s Spanish squat <strong>or</strong> ~60° leg‑extension hold @ ~70% effort</label>
+        </li>
+        <li class="task-item">
+          <input type="checkbox" id="w1d4-2">
+          <label class="task-label" for="w1d4-2"><strong>Mobility circuit</strong></label>
+        </li>
+        <ul class="nested-list">
+          <li class="task-item">
+            <input type="checkbox" id="w1d4-2a">
+            <label class="task-label" for="w1d4-2a">Ankle dorsiflexion (knee-to-wall) — 2:00 total</label>
+          </li>
+          <li class="task-item">
+            <input type="checkbox" id="w1d4-2b">
+            <label class="task-label" for="w1d4-2b">Soleus wall stretch (knee bent) + pulses — 2:00 total</label>
+          </li>
+          <li class="task-item">
+            <input type="checkbox" id="w1d4-2c">
+            <label class="task-label" for="w1d4-2c">Hip-flexor lunge stretch (posterior pelvic tilt) — 2:00 total</label>
+          </li>
+          <li class="task-item">
+            <input type="checkbox" id="w1d4-2d">
+            <label class="task-label" for="w1d4-2d">Adductor rock-backs (quadruped/knees wide) — 2:00 total</label>
+          </li>
+          <li class="task-item">
+            <input type="checkbox" id="w1d4-2e">
+            <label class="task-label" for="w1d4-2e">Hamstring neural glides (seated or lying) — 2:00 total</label>
+          </li>
+          <li class="task-item">
+            <input type="checkbox" id="w1d4-2f">
+            <label class="task-label" for="w1d4-2f">90/90 hip switches + forward fold — 2:00 total</label>
+          </li>
+          <li class="task-item">
+            <input type="checkbox" id="w1d4-2g">
+            <label class="task-label" for="w1d4-2g">T-spine "open books" (side-lying) — 2:00 total</label>
+          </li>
+          <li class="task-item">
+            <input type="checkbox" id="w1d4-2h">
+            <label class="task-label" for="w1d4-2h">Deep-squat pry (heel elevated if needed, hold a post) — 1:00 total</label>
+          </li>
+          <li class="task-item">
+            <input type="checkbox" id="w1d4-2i">
+            <label class="task-label" for="w1d4-2i">Calf raises (easy, range-finder) — 2:00 total</label>
+          </li>
+        </ul>
+        <li class="task-item">
+          <input type="checkbox" id="w1d4-3">
+          <label class="task-label" for="w1d4-3"><strong>Optional</strong> brisk walk 30–45 min</label>
+        </li>
+        <li class="task-item">
+          <input type="checkbox" id="w1d4-4">
+          <label class="task-label" for="w1d4-4"><strong>Upper Body & Core (short)</strong></label>
+        </li>
+        <ul class="nested-list">
+          <li class="task-item">
+            <input type="checkbox" id="w1d4-4a">
+            <label class="task-label" for="w1d4-4a">Push‑ups 2×AMRAP‑2</label>
+          </li>
+          <li class="task-item">
+            <input type="checkbox" id="w1d4-4b">
+            <label class="task-label" for="w1d4-4b">Band rows 2×15</label>
+          </li>
+          <li class="task-item">
+            <input type="checkbox" id="w1d4-4c">
+            <label class="task-label" for="w1d4-4c">Half‑kneeling press 2×12/side</label>
+          </li>
+          <li class="task-item">
+            <input type="checkbox" id="w1d4-4d">
+            <label class="task-label" for="w1d4-4d">Pallof press 2×12/side</label>
+          </li>
+          <li class="task-item">
+            <input type="checkbox" id="w1d4-4e">
+            <label class="task-label" for="w1d4-4e">Side plank 2×30–45s/side.</label>
+          </li>
+        </ul>
+      </ul>
+      <div class="pain-tracking">
+        Pain during (0–10): <input type="number" min="0" max="10" /> | Next‑day pain (0–10): <input type="number" min="0" max="10" /> | Notes: <input type="text" style="width: 200px;" />
+      </div>
+    </div>
+
+    <!-- Week 1 - Day 5 -->
+    <div class="day-card">
+      <div class="day-header">
+        <div>Sun Nov 02, 2025 — <strong>Week 1 · Rest</strong></div>
+      </div>
+      <ul class="task-list">
+        <li class="task-item">
+          <input type="checkbox" id="w1d5-1">
+          <label class="task-label" for="w1d5-1"><strong>Rest</strong></label>
+        </li>
+        <li class="task-item">
+          <input type="checkbox" id="w1d5-2">
+          <label class="task-label" for="w1d5-2">Optional light isometrics if sore</label>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Week 1 - Day 6 -->
+    <div class="day-card">
+      <div class="day-header">
+        <div>Mon Nov 03, 2025 — <strong>Week 1 · HSR</strong></div>
+      </div>
+      <ul class="task-list">
+        <li class="task-item">
+          <input type="checkbox" id="w1d6-1">
+          <label class="task-label" for="w1d6-1"><strong>Warm‑up</strong>: 8–10 min easy bike/row + dynamic leg swings/hip circles/ankle rocks</label>
+        </li>
+        <li class="task-item">
+          <input type="checkbox" id="w1d6-2">
+          <label class="task-label" for="w1d6-2"><strong>Isometrics</strong>: 5×45–60 s Spanish squat <strong>or</strong> ~60° leg‑extension hold @ ~70% effort</label>
+        </li>
+        <li class="task-item">
+          <input type="checkbox" id="w1d6-3">
+          <label class="task-label" for="w1d6-3"><strong>Leg press</strong> 4×15 (3‑0‑3) — Start ~1×45 lb plate/side; add +10–20 lb total per set to finish at RIR 2–3 (pain ≤3/10).</label>
+        </li>
+        <li class="task-item">
+          <input type="checkbox" id="w1d6-4">
+          <label class="task-label" for="w1d6-4"><strong>Goblet box squat</strong> 3×15 — choose a load that maintains tempo and form</label>
+        </li>
+        <li class="task-item">
+          <input type="checkbox" id="w1d6-5">
+          <label class="task-label" for="w1d6-5"><strong>Hip thrust/bridge</strong> 3×12–15 — controlled; full hip lockout</label>
+        </li>
+        <li class="task-item">
+          <input type="checkbox" id="w1d6-6">
+          <label class="task-label" for="w1d6-6"><strong>Calf raises</strong> straight‑ & bent‑knee 3×15 — Bodyweight + 2×20–25 lb DBs (3×15). Pause at bottom; no bouncing.</label>
+        </li>
+        <li class="task-item">
+          <input type="checkbox" id="w1d6-7">
+          <label class="task-label" for="w1d6-7"><strong>Miniband lateral walks</strong> 2×15 m</label>
+        </li>
+        <li class="task-item">
+          <input type="checkbox" id="w1d6-8">
+          <label class="task-label" for="w1d6-8"><strong>Mobility</strong></label>
+        </li>
+        <ul class="nested-list">
+          <li class="task-item">
+            <input type="checkbox" id="w1d6-8a">
+            <label class="task-label" for="w1d6-8a">quads 30 s×2</label>
+          </li>
+          <li class="task-item">
+            <input type="checkbox" id="w1d6-8b">
+            <label class="task-label" for="w1d6-8b">hip‑flexors 30 s×2</label>
+          </li>
+          <li class="task-item">
+            <input type="checkbox" id="w1d6-8c">
+            <label class="task-label" for="w1d6-8c">calves 30 s×2</label>
+          </li>
+          <li class="task-item">
+            <input type="checkbox" id="w1d6-8d">
+            <label class="task-label" for="w1d6-8d">ankle dorsiflexion rocks 2×10</label>
+          </li>
+        </ul>
+      </ul>
+      <div class="pain-tracking">
+        Pain during (0–10): <input type="number" min="0" max="10" /> | Next‑day pain (0–10): <input type="number" min="0" max="10" /> | Notes: <input type="text" style="width: 200px;" />
+      </div>
+    </div>
+
+    <!-- Week 1 - Day 7 -->
+    <div class="day-card">
+      <div class="day-header">
+        <div>Tue Nov 04, 2025 — <strong>Week 1 · Cross‑train + UB/Core A</strong></div>
+      </div>
+      <ul class="task-list">
+        <li class="task-item">
+          <input type="checkbox" id="w1d7-1">
+          <label class="task-label" for="w1d7-1"><strong>Warm‑up</strong>: 8–10 min easy bike/row + dynamic leg swings/hip circles/ankle rocks</label>
+        </li>
+        <li class="task-item">
+          <input type="checkbox" id="w1d7-2">
+          <label class="task-label" for="w1d7-2"><strong>Isometrics</strong>: 5×45–60 s Spanish squat <strong>or</strong> ~60° leg‑extension hold @ ~70% effort</label>
+        </li>
+        <li class="task-item">
+          <input type="checkbox" id="w1d7-3">
+          <label class="task-label" for="w1d7-3"><strong>Run/Cardio</strong> — Z2 bike/row 20–30 min</label>
+        </li>
+        <li class="task-item">
+          <input type="checkbox" id="w1d7-4">
+          <label class="task-label" for="w1d7-4"><strong>Upper Body & Core A</strong></label>
+        </li>
+        <ul class="nested-list">
+          <li class="task-item">
+            <input type="checkbox" id="w1d7-4a">
+            <label class="task-label" for="w1d7-4a">Bench press or push‑ups 4×6–10</label>
+          </li>
+          <li class="task-item">
+            <input type="checkbox" id="w1d7-4b">
+            <label class="task-label" for="w1d7-4b">1‑arm DB row 4×8–12/side</label>
+          </li>
+          <li class="task-item">
+            <input type="checkbox" id="w1d7-4c">
+            <label class="task-label" for="w1d7-4c">Half‑kneeling DB overhead press 3×8–10/side</label>
+          </li>
+          <li class="task-item">
+            <input type="checkbox" id="w1d7-4d">
+            <label class="task-label" for="w1d7-4d">Lat pulldown or assisted pull‑ups 3×6–10</label>
+          </li>
+          <li class="task-item">
+            <input type="checkbox" id="w1d7-4e">
+            <label class="task-label" for="w1d7-4e"><strong>Core:</strong></label>
+          </li>
+          <ul class="nested-list">
+            <li class="task-item">
+              <input type="checkbox" id="w1d7-4e1">
+              <label class="task-label" for="w1d7-4e1">Dead bug 3×8/side</label>
+            </li>
+            <li class="task-item">
+              <input type="checkbox" id="w1d7-4e2">
+              <label class="task-label" for="w1d7-4e2">Pallof press 3×10/side</label>
+            </li>
+            <li class="task-item">
+              <input type="checkbox" id="w1d7-4e3">
+              <label class="task-label" for="w1d7-4e3">Side plank 3×30–45s/side</label>
+            </li>
+            <li class="task-item">
+              <input type="checkbox" id="w1d7-4e4">
+              <label class="task-label" for="w1d7-4e4">Face pulls 2×15</label>
+            </li>
+            <li class="task-item">
+              <input type="checkbox" id="w1d7-4e5">
+              <label class="task-label" for="w1d7-4e5">Band external rotation 2×15.</label>
+            </li>
+          </ul>
+        </ul>
+        <li class="task-item">
+          <input type="checkbox" id="w1d7-5">
+          <label class="task-label" for="w1d7-5"><strong>Mobility</strong></label>
+        </li>
+        <ul class="nested-list">
+          <li class="task-item">
+            <input type="checkbox" id="w1d7-5a">
+            <label class="task-label" for="w1d7-5a">quads 30 s×2</label>
+          </li>
+          <li class="task-item">
+            <input type="checkbox" id="w1d7-5b">
+            <label class="task-label" for="w1d7-5b">hip‑flexors 30 s×2</label>
+          </li>
+          <li class="task-item">
+            <input type="checkbox" id="w1d7-5c">
+            <label class="task-label" for="w1d7-5c">calves 30 s×2</label>
+          </li>
+          <li class="task-item">
+            <input type="checkbox" id="w1d7-5d">
+            <label class="task-label" for="w1d7-5d">ankle dorsiflexion rocks 2×10</label>
+          </li>
+        </ul>
+      </ul>
+      <div class="pain-tracking">
+        Pain during (0–10): <input type="number" min="0" max="10" /> | Next‑day pain (0–10): <input type="number" min="0" max="10" /> | Notes: <input type="text" style="width: 200px;" />
+      </div>
+    </div>
+
+    <hr>
+
+    <!-- Week 2 - Day 1 -->
+    <div class="day-card">
+      <div class="day-header">
+        <div>Wed Nov 05, 2025 — <strong>Week 2 · HSR</strong></div>
+      </div>
+      <ul class="task-list">
+        <li class="task-item">
+          <input type="checkbox" id="w2d1-1">
+          <label class="task-label" for="w2d1-1"><strong>Warm‑up</strong>: 8–10 min easy bike/row + dynamic leg swings/hip circles/ankle rocks</label>
+        </li>
+        <li class="task-item">
+          <input type="checkbox" id="w2d1-2">
+          <label class="task-label" for="w2d1-2"><strong>Isometrics</strong>: 5×45–60 s Spanish squat <strong>or</strong> ~60° leg‑extension hold @ ~70% effort</label>
+        </li>
+        <li class="task-item">
+          <input type="checkbox" id="w2d1-3">
+          <label class="task-label" for="w2d1-3"><strong>Decline squat (~25°)</strong> 4×15 (3‑0‑3) — <strong>Bodyweight</strong></label>
+        </li>
+        <li class="task-item">
+          <input type="checkbox" id="w2d1-4">
+          <label class="task-label" for="w2d1-4"><strong>Leg press</strong> 4×15 — Use last week's best +20–40 lb total (still 4×15).</label>
+        </li>
+        <li class="task-item">
+          <input type="checkbox" id="w2d1-5">
+          <label class="task-label" for="w2d1-5"><strong>Split squat</strong> 3×12/side — shallow ROM; load to tolerance</label>
+        </li>
+        <li class="task-item">
+          <input type="checkbox" id="w2d1-6">
+          <label class="task-label" for="w2d1-6"><strong>Hip thrust</strong> 3×12–15 — controlled</label>
+        </li>
+        <li class="task-item">
+          <input type="checkbox" id="w2d1-7">
+          <label class="task-label" for="w2d1-7"><strong>Calf raises</strong> 3×15 — Bodyweight + 2×20–25 lb DBs (3×15). Pause at bottom; no bouncing.</label>
+        </li>
+        <li class="task-item">
+          <input type="checkbox" id="w2d1-8">
+          <label class="task-label" for="w2d1-8"><strong>Mobility</strong></label>
+        </li>
+        <ul class="nested-list">
+          <li class="task-item">
+            <input type="checkbox" id="w2d1-8a">
+            <label class="task-label" for="w2d1-8a">quads 30 s×2</label>
+          </li>
+          <li class="task-item">
+            <input type="checkbox" id="w2d1-8b">
+            <label class="task-label" for="w2d1-8b">hip‑flexors 30 s×2</label>
+          </li>
+          <li class="task-item">
+            <input type="checkbox" id="w2d1-8c">
+            <label class="task-label" for="w2d1-8c">calves 30 s×2</label>
+          </li>
+          <li class="task-item">
+            <input type="checkbox" id="w2d1-8d">
+            <label class="task-label" for="w2d1-8d">ankle dorsiflexion rocks 2×10</label>
+          </li>
+        </ul>
+      </ul>
+      <div class="pain-tracking">
+        Pain during (0–10): <input type="number" min="0" max="10" /> | Next‑day pain (0–10): <input type="number" min="0" max="10" /> | Notes: <input type="text" style="width: 200px;" />
+      </div>
+    </div>
+
+    <!-- Week 2 - Day 2 -->
+    <div class="day-card">
+      <div class="day-header">
+        <div>Thu Nov 06, 2025 — <strong>Week 2 · Cross‑train + UB/Core B</strong></div>
+      </div>
+      <ul class="task-list">
+        <li class="task-item">
+          <input type="checkbox" id="w2d2-1">
+          <label class="task-label" for="w2d2-1"><strong>Warm‑up</strong>: 8–10 min easy bike/row + dynamic leg swings/hip circles/ankle rocks</label>
+        </li>
+        <li class="task-item">
+          <input type="checkbox" id="w2d2-2">
+          <label class="task-label" for="w2d2-2"><strong>Isometrics</strong>: 5×45–60 s Spanish squat <strong>or</strong> ~60° leg‑extension hold @ ~70% effort</label>
+        </li>
+        <li class="task-item">
+          <input type="checkbox" id="w2d2-3">
+          <label class="task-label" for="w2d2-3"><strong>Run/Cardio</strong> — Z2 20–30 min</label>
+        </li>
+        <li class="task-item">
+          <input type="checkbox" id="w2d2-4">
+          <label class="task-label" for="w2d2-4"><strong>Upper Body & Core B</strong></label>
+        </li>
+        <ul class="nested-list">
+          <li class="task-item">
+            <input type="checkbox" id="w2d2-4a">
+            <label class="task-label" for="w2d2-4a">Incline DB press 3×8–12</label>
+          </li>
+          <li class="task-item">
+            <input type="checkbox" id="w2d2-4b">
+            <label class="task-label" for="w2d2-4b">Chest‑supported row 3×8–12</label>
+          </li>
+          <li class="task-item">
+            <input type="checkbox" id="w2d2-4c">
+            <label class="task-label" for="w2d2-4c">Landmine/Seated DB press 3×8–10</label>
+          </li>
+          <li class="task-item">
+            <input type="checkbox" id="w2d2-4d">
+            <label class="task-label" for="w2d2-4d">Cable row 3×10–12</label>
+          </li>
+          <li class="task-item">
+            <input type="checkbox" id="w2d2-4e">
+            <label class="task-label" for="w2d2-4e"><strong>Core:</strong></label>
+          </li>
+          <ul class="nested-list">
+            <li class="task-item">
+              <input type="checkbox" id="w2d2-4e1">
+              <label class="task-label" for="w2d2-4e1">RKC plank 3×20–30s</label>
+            </li>
+            <li class="task-item">
+              <input type="checkbox" id="w2d2-4e2">
+              <label class="task-label" for="w2d2-4e2">Anti‑rotation walkouts 3×8/side</label>
+            </li>
+            <li class="task-item">
+              <input type="checkbox" id="w2d2-4e3">
+              <label class="task-label" for="w2d2-4e3">Farmer carry 3×30–45s</label>
+            </li>
+            <li class="task-item">
+              <input type="checkbox" id="w2d2-4e4">
+              <label class="task-label" for="w2d2-4e4">Reverse fly / Y‑T‑W 2×12–15.</label>
+            </li>
+          </ul>
+        </ul>
+        <li class="task-item">
+          <input type="checkbox" id="w2d2-5">
+          <label class="task-label" for="w2d2-5"><strong>Mobility</strong></label>
+        </li>
+        <ul class="nested-list">
+          <li class="task-item">
+            <input type="checkbox" id="w2d2-5a">
+            <label class="task-label" for="w2d2-5a">quads 30 s×2</label>
+          </li>
+          <li class="task-item">
+            <input type="checkbox" id="w2d2-5b">
+            <label class="task-label" for="w2d2-5b">hip‑flexors 30 s×2</label>
+          </li>
+          <li class="task-item">
+            <input type="checkbox" id="w2d2-5c">
+            <label class="task-label" for="w2d2-5c">calves 30 s×2</label>
+          </li>
+          <li class="task-item">
+            <input type="checkbox" id="w2d2-5d">
+            <label class="task-label" for="w2d2-5d">ankle dorsiflexion rocks 2×10</label>
+          </li>
+        </ul>
+      </ul>
+      <div class="pain-tracking">
+        Pain during (0–10): <input type="number" min="0" max="10" /> | Next‑day pain (0–10): <input type="number" min="0" max="10" /> | Notes: <input type="text" style="width: 200px;" />
+      </div>
+    </div>
+
+    <!-- Week 2 - Day 3 -->
+    <div class="day-card">
+      <div class="day-header">
+        <div>Fri Nov 07, 2025 — <strong>Week 2 · HSR</strong></div>
+      </div>
+      <ul class="task-list">
+        <li class="task-item">
+          <input type="checkbox" id="w2d3-1">
+          <label class="task-label" for="w2d3-1"><strong>Warm‑up</strong>: 8–10 min easy bike/row + dynamic leg swings/hip circles/ankle rocks</label>
+        </li>
+        <li class="task-item">
+          <input type="checkbox" id="w2d3-2">
+          <label class="task-label" for="w2d3-2"><strong>Isometrics</strong>: 5×45–60 s Spanish squat <strong>or</strong> ~60° leg‑extension hold @ ~70% effort</label>
+        </li>
+        <li class="task-item">
+          <input type="checkbox" id="w2d3-3">
+          <label class="task-label" for="w2d3-3"><strong>Decline squat (~25°)</strong> 4×15 (3‑0‑3) — <strong>Bodyweight</strong></label>
+        </li>
+        <li class="task-item">
+          <input type="checkbox" id="w2d3-4">
+          <label class="task-label" for="w2d3-4"><strong>Leg press</strong> 4×15 — Use last week's best +20–40 lb total (still 4×15).</label>
+        </li>
+        <li class="task-item">
+          <input type="checkbox" id="w2d3-5">
+          <label class="task-label" for="w2d3-5"><strong>Split squat</strong> 3×12/side — shallow ROM; load to tolerance</label>
+        </li>
+        <li class="task-item">
+          <input type="checkbox" id="w2d3-6">
+          <label class="task-label" for="w2d3-6"><strong>Hip thrust</strong> 3×12–15 — controlled</label>
+        </li>
+        <li class="task-item">
+          <input type="checkbox" id="w2d3-7">
+          <label class="task-label" for="w2d3-7"><strong>Calf raises</strong> 3×15 — Bodyweight + 2×20–25 lb DBs (3×15). Pause at bottom; no bouncing.</label>
+        </li>
+        <li class="task-item">
+          <input type="checkbox" id="w2d3-8">
+          <label class="task-label" for="w2d3-8"><strong>Mobility</strong></label>
+        </li>
+        <ul class="nested-list">
+          <li class="task-item">
+            <input type="checkbox" id="w2d3-8a">
+            <label class="task-label" for="w2d3-8a">quads 30 s×2</label>
+          </li>
+          <li class="task-item">
+            <input type="checkbox" id="w2d3-8b">
+            <label class="task-label" for="w2d3-8b">hip‑flexors 30 s×2</label>
+          </li>
+          <li class="task-item">
+            <input type="checkbox" id="w2d3-8c">
+            <label class="task-label" for="w2d3-8c">calves 30 s×2</label>
+          </li>
+          <li class="task-item">
+            <input type="checkbox" id="w2d3-8d">
+            <label class="task-label" for="w2d3-8d">ankle dorsiflexion rocks 2×10</label>
+          </li>
+        </ul>
+      </ul>
+      <div class="pain-tracking">
+        Pain during (0–10): <input type="number" min="0" max="10" /> | Next‑day pain (0–10): <input type="number" min="0" max="10" /> | Notes: <input type="text" style="width: 200px;" />
+      </div>
+    </div>
+
+    <!-- Week 2 - Day 4 -->
+    <div class="day-card">
+      <div class="day-header">
+        <div>Sat Nov 08, 2025 — <strong>Week 2 · Mobility + short UB/Core</strong></div>
+      </div>
+      <ul class="task-list">
+        <li class="task-item">
+          <input type="checkbox" id="w2d4-1">
+          <label class="task-label" for="w2d4-1"><strong>Isometrics</strong>: 5×45–60 s Spanish squat <strong>or</strong> ~60° leg‑extension hold @ ~70% effort</label>
+        </li>
+        <li class="task-item">
+          <input type="checkbox" id="w2d4-2">
+          <label class="task-label" for="w2d4-2"><strong>Mobility circuit</strong></label>
+        </li>
+        <ul class="nested-list">
+          <li class="task-item">
+            <input type="checkbox" id="w2d4-2a">
+            <label class="task-label" for="w2d4-2a">Ankle dorsiflexion (knee-to-wall) — 2:00 total</label>
+          </li>
+          <li class="task-item">
+            <input type="checkbox" id="w2d4-2b">
+            <label class="task-label" for="w2d4-2b">Soleus wall stretch (knee bent) + pulses — 2:00 total</label>
+          </li>
+          <li class="task-item">
+            <input type="checkbox" id="w2d4-2c">
+            <label class="task-label" for="w2d4-2c">Hip-flexor lunge stretch (posterior pelvic tilt) — 2:00 total</label>
+          </li>
+          <li class="task-item">
+            <input type="checkbox" id="w2d4-2d">
+            <label class="task-label" for="w2d4-2d">Adductor rock-backs (quadruped/knees wide) — 2:00 total</label>
+          </li>
+          <li class="task-item">
+            <input type="checkbox" id="w2d4-2e">
+            <label class="task-label" for="w2d4-2e">Hamstring neural glides (seated or lying) — 2:00 total</label>
+          </li>
+          <li class="task-item">
+            <input type="checkbox" id="w2d4-2f">
+            <label class="task-label" for="w2d4-2f">90/90 hip switches + forward fold — 2:00 total</label>
+          </li>
+          <li class="task-item">
+            <input type="checkbox" id="w2d4-2g">
+            <label class="task-label" for="w2d4-2g">T-spine "open books" (side-lying) — 2:00 total</label>
+          </li>
+          <li class="task-item">
+            <input type="checkbox" id="w2d4-2h">
+            <label class="task-label" for="w2d4-2h">Deep-squat pry (heel elevated if needed, hold a post) — 1:00 total</label>
+          </li>
+          <li class="task-item">
+            <input type="checkbox" id="w2d4-2i">
+            <label class="task-label" for="w2d4-2i">Calf raises (easy, range-finder) — 2:00 total</label>
+          </li>
+        </ul>
+        <li class="task-item">
+          <input type="checkbox" id="w2d4-3">
+          <label class="task-label" for="w2d4-3"><strong>Upper Body & Core (short)</strong></label>
+        </li>
+        <ul class="nested-list">
+          <li class="task-item">
+            <input type="checkbox" id="w2d4-3a">
+            <label class="task-label" for="w2d4-3a">Push‑ups 2×AMRAP‑2</label>
+          </li>
+          <li class="task-item">
+            <input type="checkbox" id="w2d4-3b">
+            <label class="task-label" for="w2d4-3b">Band rows 2×15</label>
+          </li>
+          <li class="task-item">
+            <input type="checkbox" id="w2d4-3c">
+            <label class="task-label" for="w2d4-3c">Half‑kneeling press 2×12/side</label>
+          </li>
+          <li class="task-item">
+            <input type="checkbox" id="w2d4-3d">
+            <label class="task-label" for="w2d4-3d">Pallof press 2×12/side</label>
+          </li>
+          <li class="task-item">
+            <input type="checkbox" id="w2d4-3e">
+            <label class="task-label" for="w2d4-3e">Side plank 2×30–45s/side.</label>
+          </li>
+        </ul>
+      </ul>
+      <div class="pain-tracking">
+        Pain during (0–10): <input type="number" min="0" max="10" /> | Next‑day pain (0–10): <input type="number" min="0" max="10" /> | Notes: <input type="text" style="width: 200px;" />
+      </div>
+    </div>
+
+    <!-- Week 2 - Day 5 -->
+    <div class="day-card">
+      <div class="day-header">
+        <div>Sun Nov 09, 2025 — <strong>Week 2 · Rest</strong></div>
+      </div>
+      <ul class="task-list">
+        <li class="task-item">
+          <input type="checkbox" id="w2d5-1">
+          <label class="task-label" for="w2d5-1"><strong>Rest</strong></label>
+        </li>
+        <li class="task-item">
+          <input type="checkbox" id="w2d5-2">
+          <label class="task-label" for="w2d5-2">Optional light isometrics if sore</label>
+        </li>
+      </ul>
+    </div>
+
   </div>
-
-<script>
-(function(){
-  const weeksRoot = document.getElementById('weeks');
-  const startDateInput = document.getElementById('startDate');
-  const expandAllBtn = document.getElementById('expandAll');
-  const collapseAllBtn = document.getElementById('collapseAll');
-  const resetBtn = document.getElementById('resetProgress');
-  const exportBtn = document.getElementById('exportBtn');
-  const importBtn = document.getElementById('importBtn');
-  const importFile = document.getElementById('importFile');
-
-  // Default start date: today, but if this repo mirrors the prior plan, prefill Oct 29, 2025
-  const defaultISO = new Date().toISOString().slice(0,10);
-  startDateInput.value = defaultISO;
-
-  startDateInput.addEventListener('change', render);
-  expandAllBtn.addEventListener('click', () => toggleAll(true));
-  collapseAllBtn.addEventListener('click', () => toggleAll(false));
-  resetBtn.addEventListener('click', resetAll);
-  exportBtn.addEventListener('click', exportProgress);
-  importBtn.addEventListener('click', () => importFile.click());
-  importFile.addEventListener('change', onImportFile);
-
-  function storageKey(){ return `rehab-plan-${startDateInput.value}`; }
-
-  function saveProgress(progress){ localStorage.setItem(storageKey(), JSON.stringify(progress)); }
-  function loadProgress(){ try { return JSON.parse(localStorage.getItem(storageKey())) || {}; } catch(e){ return {}; } }
-
-  function toggleAll(open){
-    document.querySelectorAll('details.day').forEach(d => d.open = open);
-  }
-
-  function resetAll(){
-    if(!confirm('Clear all saved checkboxes and notes for this start date?')) return;
-    localStorage.removeItem(storageKey());
-    render();
-  }
-
-  function exportProgress(){
-    const data = localStorage.getItem(storageKey()) || '{}';
-    const blob = new Blob([data], {type: 'application/json'});
-    const a = document.createElement('a');
-    a.href = URL.createObjectURL(blob);
-    a.download = storageKey() + '.json';
-    a.click();
-  }
-
-  function onImportFile(e){
-    const file = e.target.files[0];
-    if(!file) return;
-    const reader = new FileReader();
-    reader.onload = () => {
-      try {
-        const obj = JSON.parse(reader.result);
-        if(typeof obj !== 'object') throw new Error('Invalid JSON');
-        localStorage.setItem(storageKey(), JSON.stringify(obj));
-        render();
-      } catch(err) { alert('Import failed: ' + err.message); }
-    };
-    reader.readAsText(file);
-  }
-
-  // —— Plan logic ——
-  const UB_A = {
-    title: 'Upper Body & Core A (full)',
-    text: 'Bench press or push‑ups 4×6–10; 1‑arm DB row 4×8–12/side; Half‑kneeling DB OH press 3×8–10/side; Lat pulldown or assisted pull‑ups 3×6–10; Core: Dead bug 3×8/side, Pallof press 3×10/side, Side plank 3×30–45s/side; Face pulls 2×15; Band ER 2×15.'
-  };
-  const UB_B = {
-    title: 'Upper Body & Core B (full)',
-    text: 'Incline DB press 3×8–12; Chest‑supported row 3×8–12; Landmine/Seated DB press 3×8–10; Cable row 3×10–12; Core: RKC plank 3×20–30s, Anti‑rotation walkouts 3×8/side, Farmer carry 3×30–45s; Reverse fly / Y‑T‑W 2×12–15.'
-  };
-  const UB_SHORT = {
-    title: 'Short Upper Body & Core',
-    text: 'Push‑ups 2×AMRAP‑2; Band rows 2×15; Half‑kneeling press 2×12/side; Pallof press 2×12/side; Side plank 2×30–45s/side.'
-  };
-
-  function HSR(week){
-    switch(week){
-      case 1: return 'HSR W1: Leg press 4×15 (3‑0‑3), Goblet box squat 3×15, Hip thrust/bridge 3×12–15, Calf raises (straight & bent) 3×15 each, Miniband lateral walks 2×15 m.';
-      case 2: return 'HSR W2: Decline squat (bodyweight) 4×15 (3‑0‑3); Leg press 4×15 ↑load; Split squat 3×12/side; Hip thrust 3×12–15; Calf raises 3×15.';
-      case 3: return 'HSR W3: Decline squat (eccentric‑biased) 4×12 (5s down / 1s up); Single‑leg leg press 4×12; Reverse lunge 3×10/side; Romanian deadlift 3×10.';
-      case 4: return 'HSR W4: Decline squat 4×10 (heavier); Single‑leg leg press 4×10; Step‑downs (15–20 cm) 3×10/side; Hip thrust 3×8–10; Calves heavy 4×10–12.';
-      case 5: return 'HSR W5: Decline squat 4×8 (heavy); Hack or Front squat 3×6–8; Leg extension (30–70° ROM) 3×10–12 (slow); RDL 3×8–10; Calves heavy 4×8–10.';
-      case 6: return 'HSR W6: Maintain W5 loads — Decline squat 4×8; Hack/Front squat 3×6–8; Leg extension 3×10–12; RDL 3×8–10; Calves heavy 4×8–10.';
-      case 7: return 'HSR W7 (strength): Decline squat 4×6–8 (heavy); Hack/Front squat 3×5–6; Single‑leg press 3×8–10; Leg extension 3×8–10; RDL 3×6–8; Calves heavy 4×6–8.';
-      case 8: return 'HSR W8 (taper/power): Decline squat 3×5 (moderate, fast concentric); Hack/Front squat 3×5; Leg extension 2–3×6–8; RDL 2–3×5–6; Calves 3×6–8.';
-      default: return '';
-    }
-  }
-
-  function planFor(week, dow){ // dow: 0 Mon .. 6 Sun
-    const warmup = {key:'warmup', label:'Warm‑up 8–10 min easy bike/row + dynamic legs/hips/ankles'};
-    const iso = {key:'isometrics', label:'Isometrics 5×45–60 s Spanish squat or ~60° leg‑extension @ ~70%'};
-    const mobility = {key:'mobility', label:'Mobility: quads/hip‑flexors/calves 30s×2; ankle dorsiflexion rocks 2×10'};
-
-    function pack(focus, segments){
-      return { focus, segments };
-    }
-
-    // Weeks 1–2
-    if([1,2].includes(week)){
-      if([0,2,4].includes(dow)) return pack('HSR', [warmup, iso, {key:'main', label: HSR(week)}, mobility]);
-      if(dow===1) return pack('Cross‑train + UB/Core A', [warmup, iso, {key:'main', label:'Z2 bike/row 20–30 min'}, {key:'ub', label: UB_A.title, details: UB_A.text}, mobility]);
-      if(dow===3) return pack('Cross‑train + UB/Core B', [warmup, iso, {key:'main', label:'Z2 20–30 min'}, {key:'ub', label: UB_B.title, details: UB_B.text}, mobility]);
-      if(dow===5) return pack('Mobility + short UB/Core', [iso, {key:'main', label:'Mobility circuit 15–20 min + optional brisk walk 30–45 min'}, {key:'ub', label: UB_SHORT.title, details: UB_SHORT.text}]);
-      return pack('Rest', [{key:'rest', label:'Rest'}, {key:'optIso', label:'Optional light isometrics if sore'}, mobility]);
-    }
-
-    // Week 3
-    if(week===3){
-      if([0,2,4].includes(dow)) return pack('HSR', [warmup, iso, {key:'main', label: HSR(3)}, mobility]);
-      if(dow===1) return pack('Plyo prep + UB/Core A', [warmup, iso, {key:'plyo', label:'Plyo prep: pogo hops 2×20, marching A‑skips 2×20 m (low amplitude)'}, {key:'ub', label: UB_A.title, details: UB_A.text}, mobility]);
-      if(dow===3) return pack('Cross‑train + UB/Core B', [warmup, iso, {key:'main', label:'Z2 20–30 min'}, {key:'ub', label: UB_B.title, details: UB_B.text}, mobility]);
-      if(dow===5) return pack('Plyo prep + short UB/Core', [warmup, iso, {key:'plyo', label:'Plyo prep: pogo hops 2×20, marching A‑skips 2×20 m'}, {key:'ub', label: UB_SHORT.title, details: UB_SHORT.text}, mobility]);
-      return pack('Rest', [{key:'rest', label:'Rest'}, {key:'optIso', label:'Optional light isometrics if sore'}, mobility]);
-    }
-
-    // Week 4
-    if(week===4){
-      if([0,2,4].includes(dow)) return pack('HSR', [warmup, iso, {key:'main', label: HSR(4)}, mobility]);
-      if(dow===1) return pack('Run‑walk + Plyo + UB/Core B', [warmup, iso, {key:'run', label:'Run‑walk 1′/1′ ×10 (easy)'}, {key:'plyo', label:'Line hops 3×20; box landings 3×6 (15–20 cm)'}, {key:'ub', label: UB_B.title, details: UB_B.text}, mobility]);
-      if(dow===3) return pack('Cross‑train + UB/Core A', [warmup, iso, {key:'main', label:'Z2 20–30 min'}, {key:'ub', label: UB_A.title, details: UB_A.text}, mobility]);
-      if(dow===5) return pack('Run‑walk + Skills + short UB/Core', [warmup, iso, {key:'run', label:'Run‑walk 1′/1′ ×10'}, {key:'skills', label:'Ball skills ≤60% effort 10–15 min'}, {key:'ub', label: UB_SHORT.title, details: UB_SHORT.text}, mobility]);
-      return pack('Rest', [{key:'rest', label:'Rest'}, {key:'optIso', label:'Optional light isometrics if sore'}, mobility]);
-    }
-
-    // Week 5
-    if(week===5){
-      if([0,2,4].includes(dow)) return pack('HSR', [warmup, iso, {key:'main', label: HSR(5)}, mobility]);
-      if(dow===1) return pack('Run + Plyo/COD + UB/Core A', [warmup, iso, {key:'run', label:'Run 2′/1′ ×8–10 (24–30 min)'}, {key:'plyo', label:'DL jumps 3×10; lateral bounds 3×8/side; decel drills 3×5'}, {key:'ub', label: UB_A.title, details: UB_A.text}, mobility]);
-      if(dow===3) return pack('Mobility + UB/Core B', [iso, {key:'main', label:'Mobility only 15–20 min'}, {key:'ub', label: UB_B.title, details: UB_B.text}]);
-      if(dow===5) return pack('Plyo/COD + Skills + short UB/Core', [warmup, iso, {key:'plyo', label:'DL jumps 3×10; lateral bounds 3×10/side; shuttle cuts 4×10–15 m'}, {key:'skills', label:'Skills ≤60% 15–20 min'}, {key:'ub', label: UB_SHORT.title, details: UB_SHORT.text}, mobility]);
-      return pack('Rest', [{key:'rest', label:'Rest'}, {key:'optIso', label:'Optional light isometrics if sore'}, mobility]);
-    }
-
-    // Week 6
-    if(week===6){
-      if([0,2,4].includes(dow)) return pack('HSR', [warmup, iso, {key:'main', label: HSR(6)}, mobility]);
-      if(dow===1) return pack('Run + Plyo/COD + UB/Core B', [warmup, iso, {key:'run', label:'Run 20–30 min easy OR 3′/1′ ×8–10'}, {key:'plyo', label:'Approach jumps 3×8; lateral bounds 3×10/side; shuttle cuts 4×10–15 m @ 70–80%'}, {key:'ub', label: UB_B.title, details: UB_B.text}, mobility]);
-      if(dow===3) return pack('Easy cardio + UB/Core A', [warmup, iso, {key:'main', label:'Easy cross‑train 20–25 min OR run‑walk 1′/1′ ×8'}, {key:'ub', label: UB_A.title, details: UB_A.text}, mobility]);
-      if(dow===5) return pack('Limited practice + short UB/Core', [warmup, iso, {key:'skills', label:'Limited practice ≤70% for 10–15 min (half‑court hoops or light soccer rondos)'}, {key:'plyo', label:'Plyo/COD as tolerated'}, {key:'ub', label: UB_SHORT.title, details: UB_SHORT.text}, mobility]);
-      return pack('Rest', [{key:'rest', label:'Rest'}, {key:'optIso', label:'Optional light isometrics if sore'}, mobility]);
-    }
-
-    // Week 7
-    if(week===7){
-      if([0,2,4].includes(dow)) return pack('HSR (strength)', [warmup, iso, {key:'main', label: HSR(7)}, mobility]);
-      if(dow===1) return pack('Run + strides + Plyo + UB/Core A', [warmup, iso, {key:'run', label:'Run 30–35 min easy + 6×20 m strides (walk back)'}, {key:'plyo', label:'Depth landings 20–25 cm 3×5 (quiet)'}, {key:'ub', label: UB_A.title, details: UB_A.text}, mobility]);
-      if(dow===3) return pack('Cardio/Tempo + UB/Core B', [warmup, iso, {key:'main', label:'Z2 25–35 min OR tempo 3×6 min @ Z3 (2 min easy)'}, {key:'ub', label: UB_B.title, details: UB_B.text}, mobility]);
-      if(dow===5) return pack('COD + Scrimmage + short UB/Core', [warmup, iso, {key:'plyo', label:'Shuttle cuts 5×10–15 m; lateral bounds 3×12/side'}, {key:'skills', label:'Limited scrimmage 15–20 min @ 75–85%'}, {key:'ub', label: UB_SHORT.title, details: UB_SHORT.text}, mobility]);
-      return pack('Rest', [{key:'rest', label:'Rest'}, {key:'optIso', label:'Optional light isometrics if sore'}, mobility]);
-    }
-
-    // Week 8
-    if(week===8){
-      if(dow===0) return pack('HSR (power)', [warmup, iso, {key:'main', label: HSR(8) + ' Emphasize fast but controlled concentric; leave ~2 reps in reserve.'}, mobility]);
-      if(dow===1) return pack('Intervals + low Plyo + UB/Core B', [warmup, iso, {key:'run', label:'Intervals: 6×2 min @ 80–85% (1 min easy)'}, {key:'plyo', label:'Line hops 2×20; approach jumps 2×6 (low volume)'}, {key:'ub', label: UB_B.title, details: UB_B.text}, mobility]);
-      if(dow===2) return pack('Recovery + UB/Core A', [warmup, iso, {key:'main', label:'Recovery: easy 15–20 min cardio + mobility focus'}, {key:'ub', label: UB_A.title, details: UB_A.text}]);
-      if(dow===3) return pack('HSR maintainers', [warmup, iso, {key:'main', label:'Key lifts 3×5 (moderate); stop well before pain'}, mobility]);
-      if(dow===4) return pack('Prep/Mobility', [iso, {key:'main', label:'Mobility 20 min; optional 4×20 m relaxed strides'}]);
-      if(dow===5) return pack('RTP checks + limited practice', [
-        {key:'rtp', label:'RTP checks: single‑leg decline squat ≤2/10 pain w/o 24 h flare; 10 single‑leg hops quiet/symmetric; 20–30 min easy continuous run OR 30 min skills ≤75%.'}
-      ]);
-      return pack('Rest', [{key:'rest', label:'Rest'}]);
-    }
-
-    return { focus: '', segments: [] };
-  }
-
-  function fmtDate(d){ return d.toISOString().slice(0,10); }
-  function addDays(date, days){ const d = new Date(date); d.setDate(d.getDate()+days); return d; }
-
-  function render(){
-    weeksRoot.innerHTML = '';
-    const startISO = startDateInput.value || new Date().toISOString().slice(0,10);
-    const start = new Date(startISO + 'T00:00:00');
-    const store = loadProgress();
-
-    for(let w=1; w<=8; w++){
-      const weekEl = document.createElement('section');
-      weekEl.className = 'week';
-
-      // Week header
-      const head = document.createElement('header');
-      head.className = 'weekhead';
-      const firstDay = addDays(start, (w-1)*7);
-      const lastDay = addDays(start, (w-1)*7 + 6);
-      const range = `${fmtDate(firstDay)} → ${fmtDate(lastDay)}`;
-
-      head.innerHTML = `<h2>Week ${w} <span class="kicker">${range}</span></h2>` +
-        `<div class="week-tools">`+
-          `<label class="visa">VISA‑P: <input type="number" min="0" max="100" step="1" data-visa="${w}"></label>`+
-        `</div>`;
-
-      weekEl.appendChild(head);
-
-      // Days
-      for(let d=0; d<7; d++){
-        const dayIndex = (w-1)*7 + d;
-        const date = addDays(start, dayIndex);
-        const dow = date.getDay(); // 0 Sun..6 Sat
-        // Map to 0=Mon..6=Sun
-        const dowMon0 = (dow+6)%7;
-        const plan = planFor(w, dowMon0);
-        const dateKey = fmtDate(date);
-        const dayKey = `w${w}-d${d}-${dateKey}`;
-
-        const details = document.createElement('details');
-        details.className = 'day';
-        details.open = (w<=2 && d<2); // open first couple by default
-
-        const summary = document.createElement('summary');
-        const dayName = date.toLocaleDateString(undefined, { weekday: 'short' });
-        summary.innerHTML = `<div><strong>${dayName}</strong> <span class="date">${dateKey}</span> — <span class="focus">${plan.focus}</span></div><div class="muted small">click to expand</div>`;
-        details.appendChild(summary);
-
-        const content = document.createElement('div');
-        content.className = 'content';
-
-        // Segments (checkboxes)
-        const saved = store[dayKey] || {};
-
-        plan.segments.forEach((seg, idx) => {
-          const line = document.createElement('div');
-          line.className = 'taskline';
-          const id = `${dayKey}-s${idx}`;
-          const cb = document.createElement('input');
-          cb.type = 'checkbox';
-          cb.id = id;
-          cb.checked = !!saved[id];
-          cb.addEventListener('change', () => { store[dayKey] = store[dayKey]||{}; store[dayKey][id] = cb.checked; saveProgress(store); });
-
-          const label = document.createElement('label');
-          label.setAttribute('for', id);
-          label.innerHTML = `<strong>${seg.label}</strong>${seg.details ? `<div class="muted small">${seg.details}</div>`: ''}`;
-
-          line.appendChild(cb);
-          line.appendChild(label);
-          content.appendChild(line);
-        });
-
-        // Pain inputs + notes
-        const nums = document.createElement('div');
-        nums.className = 'numbers';
-        const duringId = `${dayKey}-painDuring`;
-        const nextId = `${dayKey}-painNext`;  
-        nums.innerHTML = `
-          <label>Peak pain during (0–10) <input type="number" min="0" max="10" step="1" id="${duringId}"></label>
-          <label>Next‑day pain (0–10) <input type="number" min="0" max="10" step="1" id="${nextId}"></label>
-        `;
-        content.appendChild(nums);
-
-        const duringInput = () => document.getElementById(duringId);
-        const nextInput = () => document.getElementById(nextId);
-        // Restore numbers
-        if(saved[duringId] != null) setTimeout(()=> duringInput().value = saved[duringId], 0);
-        if(saved[nextId] != null) setTimeout(()=> nextInput().value = saved[nextId], 0);
-        // Save on change
-        const saveNum = () => {
-          store[dayKey] = store[dayKey]||{};
-          store[dayKey][duringId] = Number(duringInput().value);
-          store[dayKey][nextId] = Number(nextInput().value);
-          saveProgress(store);
-        };
-        setTimeout(()=>{
-          duringInput().addEventListener('change', saveNum);
-          nextInput().addEventListener('change', saveNum);
-        }, 0);
-
-        const notesId = `${dayKey}-notes`;
-        const notes = document.createElement('textarea');
-        notes.className = 'textarea';
-        notes.placeholder = 'Notes, loads, reps, regressions/progressions…';
-        notes.id = notesId;
-        if(saved[notesId]) notes.value = saved[notesId];
-        notes.addEventListener('input', () => { store[dayKey] = store[dayKey]||{}; store[dayKey][notesId] = notes.value; saveProgress(store); });
-        content.appendChild(notes);
-
-        details.appendChild(content);
-        weekEl.appendChild(details);
-
-        // VISA‑P binding for the week header
-        const visaInput = head.querySelector(`input[data-visa="${w}"]`);
-        const visaKey = `w${w}-visap`;
-        if(store[visaKey] != null) visaInput.value = store[visaKey];
-        visaInput.addEventListener('change', () => { store[visaKey] = Number(visaInput.value); saveProgress(store); });
-      }
-
-      weeksRoot.appendChild(weekEl);
-    }
-  }
-
-  // Initial render
-  render();
-})();
-</script>
 </body>
 </html>
-

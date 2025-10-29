@@ -41,8 +41,21 @@
 - [ ] **Warm‑up**: 8–10 min easy bike/row + dynamic leg swings/hip circles/ankle rocks
 - [ ] **Isometrics**: 5×45–60 s Spanish squat **or** ~60° leg‑extension hold @ ~70% effort
 - [ ] **Run/Cardio** — Z2 20–30 min
-- [ ] **Upper Body & Core B** — Incline DB press 3×8–12; Chest‑supported row 3×8–12; Landmine/Seated DB press 3×8–10; Cable row 3×10–12; Core: RKC plank 3×20–30s, Anti‑rotation walkouts 3×8/side, Farmer carry 3×30–45s; Reverse fly / Y‑T‑W 2×12–15.
-- [ ] **Mobility**: quads/hip‑flexors/calves 30 s×2; ankle dorsiflexion rocks 2×10
+- [ ] **Upper Body & Core B** 
+    - [ ] Incline DB press 3×8–12
+    - [ ] Chest‑supported row 3×8–12
+    - [ ] Landmine/Seated DB press 3×8–10
+    - [ ] Cable row 3×10–12
+    - [ ] Core: 
+        - [ ] RKC plank 3×20–30s
+        - [ ] Anti‑rotation walkouts 3×8/side
+        - [ ] Farmer carry 3×30–45s
+        - [ ] Reverse fly / Y‑T‑W 2×12–15.
+- [ ] **Mobility**
+    - [ ] quads 30 s×2
+    - [ ] hip‑flexors 30 s×2
+    - [ ] calves 30 s×2
+    - [ ] ankle dorsiflexion rocks 2×10
 
 > Pain during (0–10): ____  |  Next‑day pain (0–10): ____  |  Notes: ____________________________
 
@@ -56,7 +69,11 @@
 - [ ] **Hip thrust/bridge** 3×12–15 — controlled; full hip lockout
 - [ ] **Calf raises** straight‑ & bent‑knee 3×15 — Bodyweight + 2×20–25 lb DBs (3×15). Pause at bottom; no bouncing.
 - [ ] **Miniband lateral walks** 2×15 m
-- [ ] **Mobility**: quads/hip‑flexors/calves 30 s×2; ankle dorsiflexion rocks 2×10
+- [ ] **Mobility**
+    - [ ] quads 30 s×2
+    - [ ] hip‑flexors 30 s×2
+    - [ ] calves 30 s×2
+    - [ ] ankle dorsiflexion rocks 2×10
 
 > Pain during (0–10): ____  |  Next‑day pain (0–10): ____  |  Notes: ____________________________
 
@@ -64,8 +81,23 @@
 
 ### Sat Nov 01, 2025 — **Week 1 · Mobility + short UB/Core**
 - [ ] **Isometrics**: 5×45–60 s Spanish squat **or** ~60° leg‑extension hold @ ~70% effort
-- [ ] **Mobility circuit** 15–20 min + optional brisk walk 30–45 min
-- [ ] **Upper Body & Core (short)** — Push‑ups 2×AMRAP‑2; Band rows 2×15; Half‑kneeling press 2×12/side; Pallof press 2×12/side; Side plank 2×30–45s/side.
+- [ ] **Mobility circuit** 
+    - [ ] Ankle dorsiflexion (knee-to-wall) — 2:00 total
+    - [ ] Soleus wall stretch (knee bent) + pulses — 2:00 total
+    - [ ] Hip-flexor lunge stretch (posterior pelvic tilt) — 2:00 total
+    - [ ] Adductor rock-backs (quadruped/knees wide) — 2:00 total
+    - [ ] Hamstring neural glides (seated or lying) — 2:00 total
+    - [ ] 90/90 hip switches + forward fold — 2:00 total
+    - [ ] T-spine “open books” (side-lying) — 2:00 total
+    - [ ] Deep-squat pry (heel elevated if needed, hold a post) — 1:00 total
+    - [ ] Calf raises (easy, range-finder) — 2:00 total
+- [ ] **Optional** brisk walk 30–45 min
+- [ ] **Upper Body & Core (short)** 
+    - [ ] Push‑ups 2×AMRAP‑2
+    - [ ] Band rows 2×15
+    - [ ] Half‑kneeling press 2×12/side
+    - [ ] Pallof press 2×12/side
+    - [ ] Side plank 2×30–45s/side.
 
 > Pain during (0–10): ____  |  Next‑day pain (0–10): ____  |  Notes: ____________________________
 
@@ -85,7 +117,11 @@
 - [ ] **Hip thrust/bridge** 3×12–15 — controlled; full hip lockout
 - [ ] **Calf raises** straight‑ & bent‑knee 3×15 — Bodyweight + 2×20–25 lb DBs (3×15). Pause at bottom; no bouncing.
 - [ ] **Miniband lateral walks** 2×15 m
-- [ ] **Mobility**: quads/hip‑flexors/calves 30 s×2; ankle dorsiflexion rocks 2×10
+- [ ] **Mobility**
+    - [ ] quads 30 s×2
+    - [ ] hip‑flexors 30 s×2
+    - [ ] calves 30 s×2
+    - [ ] ankle dorsiflexion rocks 2×10
 
 > Pain during (0–10): ____  |  Next‑day pain (0–10): ____  |  Notes: ____________________________
 
@@ -95,8 +131,22 @@
 - [ ] **Warm‑up**: 8–10 min easy bike/row + dynamic leg swings/hip circles/ankle rocks
 - [ ] **Isometrics**: 5×45–60 s Spanish squat **or** ~60° leg‑extension hold @ ~70% effort
 - [ ] **Run/Cardio** — Z2 bike/row 20–30 min
-- [ ] **Upper Body & Core A** — Bench press or push‑ups 4×6–10; 1‑arm DB row 4×8–12/side; Half‑kneeling DB overhead press 3×8–10/side; Lat pulldown or assisted pull‑ups 3×6–10; Core: Dead bug 3×8/side, Pallof press 3×10/side, Side plank 3×30–45s/side; Face pulls 2×15; Band external rotation 2×15.
-- [ ] **Mobility**: quads/hip‑flexors/calves 30 s×2; ankle dorsiflexion rocks 2×10
+- [ ] **Upper Body & Core A**
+    - [ ] Bench press or push‑ups 4×6–10
+    - [ ] 1‑arm DB row 4×8–12/side
+    - [ ] Half‑kneeling DB overhead press 3×8–10/side
+    - [ ] Lat pulldown or assisted pull‑ups 3×6–10
+    - [ ] Core: 
+        - [ ] Dead bug 3×8/side
+        - [ ] Pallof press 3×10/side
+        - [ ] Side plank 3×30–45s/side
+        - [ ] Face pulls 2×15
+        - [ ] Band external rotation 2×15.
+- [ ] **Mobility**
+    - [ ] quads 30 s×2
+    - [ ] hip‑flexors 30 s×2
+    - [ ] calves 30 s×2
+    - [ ] ankle dorsiflexion rocks 2×10
 
 > Pain during (0–10): ____  |  Next‑day pain (0–10): ____  |  Notes: ____________________________
 
@@ -110,7 +160,11 @@
 - [ ] **Split squat** 3×12/side — shallow ROM; load to tolerance
 - [ ] **Hip thrust** 3×12–15 — controlled
 - [ ] **Calf raises** 3×15 — Bodyweight + 2×20–25 lb DBs (3×15). Pause at bottom; no bouncing.
-- [ ] **Mobility**: quads/hip‑flexors/calves 30 s×2; ankle dorsiflexion rocks 2×10
+- [ ] **Mobility**
+    - [ ] quads 30 s×2
+    - [ ] hip‑flexors 30 s×2
+    - [ ] calves 30 s×2
+    - [ ] ankle dorsiflexion rocks 2×10
 
 > Pain during (0–10): ____  |  Next‑day pain (0–10): ____  |  Notes: ____________________________
 
@@ -120,8 +174,21 @@
 - [ ] **Warm‑up**: 8–10 min easy bike/row + dynamic leg swings/hip circles/ankle rocks
 - [ ] **Isometrics**: 5×45–60 s Spanish squat **or** ~60° leg‑extension hold @ ~70% effort
 - [ ] **Run/Cardio** — Z2 20–30 min
-- [ ] **Upper Body & Core B** — Incline DB press 3×8–12; Chest‑supported row 3×8–12; Landmine/Seated DB press 3×8–10; Cable row 3×10–12; Core: RKC plank 3×20–30s, Anti‑rotation walkouts 3×8/side, Farmer carry 3×30–45s; Reverse fly / Y‑T‑W 2×12–15.
-- [ ] **Mobility**: quads/hip‑flexors/calves 30 s×2; ankle dorsiflexion rocks 2×10
+- [ ] **Upper Body & Core B** 
+    - [ ] Incline DB press 3×8–12
+    - [ ] Chest‑supported row 3×8–12
+    - [ ] Landmine/Seated DB press 3×8–10
+    - [ ] Cable row 3×10–12
+    - [ ] Core: 
+        - [ ] RKC plank 3×20–30s
+        - [ ] Anti‑rotation walkouts 3×8/side
+        - [ ] Farmer carry 3×30–45s
+        - [ ] Reverse fly / Y‑T‑W 2×12–15.
+- [ ] **Mobility**
+    - [ ] quads 30 s×2
+    - [ ] hip‑flexors 30 s×2
+    - [ ] calves 30 s×2
+    - [ ] ankle dorsiflexion rocks 2×10
 
 > Pain during (0–10): ____  |  Next‑day pain (0–10): ____  |  Notes: ____________________________
 
@@ -135,7 +202,11 @@
 - [ ] **Split squat** 3×12/side — shallow ROM; load to tolerance
 - [ ] **Hip thrust** 3×12–15 — controlled
 - [ ] **Calf raises** 3×15 — Bodyweight + 2×20–25 lb DBs (3×15). Pause at bottom; no bouncing.
-- [ ] **Mobility**: quads/hip‑flexors/calves 30 s×2; ankle dorsiflexion rocks 2×10
+- [ ] **Mobility**
+    - [ ] quads 30 s×2
+    - [ ] hip‑flexors 30 s×2
+    - [ ] calves 30 s×2
+    - [ ] ankle dorsiflexion rocks 2×10
 
 > Pain during (0–10): ____  |  Next‑day pain (0–10): ____  |  Notes: ____________________________
 
@@ -143,8 +214,22 @@
 
 ### Sat Nov 08, 2025 — **Week 2 · Mobility + short UB/Core**
 - [ ] **Isometrics**: 5×45–60 s Spanish squat **or** ~60° leg‑extension hold @ ~70% effort
-- [ ] **Mobility circuit** 15–20 min + optional brisk walk 30–45 min
-- [ ] **Upper Body & Core (short)** — Push‑ups 2×AMRAP‑2; Band rows 2×15; Half‑kneeling press 2×12/side; Pallof press 2×12/side; Side plank 2×30–45s/side.
+- [ ] **Mobility circuit** 
+    - [ ] Ankle dorsiflexion (knee-to-wall) — 2:00 total
+    - [ ] Soleus wall stretch (knee bent) + pulses — 2:00 total
+    - [ ] Hip-flexor lunge stretch (posterior pelvic tilt) — 2:00 total
+    - [ ] Adductor rock-backs (quadruped/knees wide) — 2:00 total
+    - [ ] Hamstring neural glides (seated or lying) — 2:00 total
+    - [ ] 90/90 hip switches + forward fold — 2:00 total
+    - [ ] T-spine “open books” (side-lying) — 2:00 total
+    - [ ] Deep-squat pry (heel elevated if needed, hold a post) — 1:00 total
+    - [ ] Calf raises (easy, range-finder) — 2:00 total
+- [ ] **Upper Body & Core (short)** 
+    - [ ] Push‑ups 2×AMRAP‑2
+    - [ ] Band rows 2×15
+    - [ ] Half‑kneeling press 2×12/side
+    - [ ] Pallof press 2×12/side
+    - [ ] Side plank 2×30–45s/side.
 
 > Pain during (0–10): ____  |  Next‑day pain (0–10): ____  |  Notes: ____________________________
 
